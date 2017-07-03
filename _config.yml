@@ -51,6 +51,9 @@ collections:
   episodes:
     output: true
     permalink: /:path/
+  labs:
+    output: true
+    permalink: /:path/
   extras:
     output: true
 
