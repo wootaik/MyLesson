@@ -63,7 +63,7 @@ defaults:
       root: ..
   - scope:
       path: ""
-      type: labs
+      type: labs, episodes
     values:
       layout: episode
 
