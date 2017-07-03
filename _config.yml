@@ -63,9 +63,9 @@ defaults:
       root: ..
   - scope:
       path: ""
-      type: episodes
+      type: labs
     values:
-      layout: episode
+      layout: lab
 
 # Files and directories that are not to be copied.
 exclude:
