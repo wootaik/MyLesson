@@ -3,6 +3,10 @@ layout: page
 title: "Licenses"
 permalink: /license/
 ---
+
+무엇인가 궁시렁 궁시렁
+
+
 ## Instructional Material
 
 All Software Carpentry and Data Carpentry instructional material is
