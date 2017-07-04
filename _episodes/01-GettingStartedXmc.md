@@ -150,7 +150,7 @@ XMC 하드웨어를 제일 밑으로 하고 그 위에 계층적으로 라이브
 
 ## 실습
 
-* Getting Started Exmaple
+* [Getting Started Example](https://wootaik.github.io/MyLesson/01-LabGettingStartedPart1/)
     * XMC4500 Lite board 로 DAVE project 하나 만들고 따라해 보기
 
 ## 요약
