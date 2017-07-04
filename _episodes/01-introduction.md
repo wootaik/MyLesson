@@ -17,4 +17,4 @@ keypoints:
 
 
 
-![XMC4400 System]({{ page.root }}/fig/XMC4400_System.png "Title")
+![XMC4400 System](../fig/XMC4400_System.png "Title")
