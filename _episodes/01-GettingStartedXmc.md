@@ -40,7 +40,7 @@ XMC4000 시리즈는 ARM Cortex-M4 프로세서 코어를 사용하는 산업용
 오늘날의 내장형 제어 시스템은 저전력 특징을 갖어야 하는 것을 기본으로 점점더 복잡한 기능을 필요로 하게 되었다. 이에 따라 XMC4000는 DSP(Digital Signal Processing) 혹은 FPU(Floating Point Unit)와 같은 강력한 연산능력을 갖춘 CPU 코어 사용하며, 성능을 극대화 하기 위한 통합형 주변장치를 갖추고 있다.  XMC 활용에 앞서서 중요한 구조적 특징과 모듈별 특징을 살펴보면 다음과 같다.
 
 ### 시스템 개관
-![XMC4400 System]({{ page.root }}/fig/XMC4400_System.png "Title")
+![XMC4400 System](../fig/XMC4400_System.png "Title")
 
 
 ### CPU 서브시스템
@@ -114,7 +114,7 @@ XMC 패밀리를 위하여 Infineon은 DAVE(Digital Application Virtual Engineer
 
 다른 마이크로컨트롤러 관련 개발 환경들이 IDE와 컴파일러의 패키지를 주로하고 이를 활용하는 예제를 제공하있다. 이에 비하여 DAVE는 라이브러리와 그래픽한 설계도구, 코드생성도구 등을 함께 제공하고 있다. DAVE를 사용하여 개발자들은 손쉽게 XMC를 사용한 소프트웨어를 설계하고 개발할 수 있는 것이다. 더욱이 이러한 환경을 무료로 제공하여 산업현장과 교육현장의 엔지니어들이 경제적 부담없이 XMC를 활용할 수 있도록 하고 있다.
 
-![DAVE Overview]({{ page.root }}/fig/DAVE_Overview.png)
+![DAVE Overview](../fig/DAVE_Overview.png)
 
 ### 프로그래머의 IDE, eclipse & GNU-C
 DAVE는 이클립스를 기본 플랫폼으로 구성된 통합개발환경이다. 이클립스는 다양한 플랫폼에서 쓸 수 있으며, 자바를 비롯한 다양한 언어를 지원하는 프로그래밍 통합 개발 환경을 목적으로 시작되었다.  C 언어 개발을 위한 패키지로 CDT(C/C++ Development Toolkit)이 있으며, 이 패키지로 C/C++ 개발을 하려면 컴파일러가 추가로 필요하다.  PC용 컴파일러로는 Cygwin GCC와 MinGW GCC가 대표적이다. 현재는 PC용으로 뿐만 아니라 대부분의 마이크로컨트롤러 개발환경으로 자리매김 하고 있다. 이클립스는 프로젝트 관리와 소스코드 편집등의 기본적인 기능 이외에도 프로그래밍을 위한 다양한 기능을 포함하고 있다. 처음에는 조금 어렵더라도 시간을 들여 이러한 기능들을 습득할 충분한 가치가 있다.  
@@ -122,7 +122,8 @@ DAVE는 ARM Cortex용 GCC컴파일러를 내장하고 있다. GNU 컴파일러 �
 
 ### DAVE 의 계층적 구조
 제공되는 라이브러리적 측면에서 DAVE의 구조를 살펴보면 그림과 같다.
-![DAVE Architecture]({{ page.root }}/fig/DAVE_Architecture.png)
+
+![DAVE Architecture](../fig/DAVE_Architecture.png)
 
 XMC 하드웨어를 제일 밑으로 하고 그 위에 계층적으로 라이브러리를 구성하고 있다.
 
