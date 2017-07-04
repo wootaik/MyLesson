@@ -14,3 +14,7 @@ keypoints:
 
 
 무엇인가 써본다....
+
+
+
+![XMC4400 System]({{ page.root }}/fig/XMC4400_System.png "Title")
