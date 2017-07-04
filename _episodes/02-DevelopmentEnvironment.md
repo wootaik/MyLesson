@@ -32,6 +32,11 @@ keypoints:
 [KIT_XMC45_RELAX_V1](http://www.infineon.com/cms/en/product/evaluation-boards/KIT_XMC45_RELAX_V1/productType.html?productType=db3a304437849205013813b23ac17763#ispnTab1)
     - Board_Users_Manual_XMC4500_Relax_Kit-V1_R1.2_released.pdf
 
+
+[code](https://github.com/wootaik/MyLesson/tree/gh-pages/code/02_DigitalIos/DigitalIos)
+
+
+
 ## 개발환경
 
 마이크로컨트롤러의 개발환경은 PC 프로그램의 개발환경과 상당히 다르다. 여기서는 PC 프로그램에 대한 개발환경에 대하여 이해하고 있다고 가정하고, 이 두 개발환경에 대하여 비교하며 설명하도록 하겠다.
@@ -50,7 +55,7 @@ Cross-compiler를 사용하여 해당 마이크로컨트롤러에서 실행할 �
 
 마이크로컨트롤러 프로그램은 일반 PC프로그램과 달리 외부 입출력 I/O를 사용하여 제어를 하는 내장형시스템(embedded system)의 형태로 실행되게 된다.  그러므로 외부 입출력 신호를 만들어 주고 살펴볼 수 있는 계측장비가 일반적으로 많이 사용된다. 대표적으로는 특정 전압의 파형을 생성하는 함수발생기(function generator)와 정밀한 측정을 할 수 있는 오실로스코프(osciloscope)가 있다. 간단하게 입출력 신호를 만들어 주고 확인할 경우에는 가변저항, 스위치, LED 등을 활용하기도 한다.
 
-![전형적인 마이크로컨트롤러 개발 환경](./images/DevEnv_DevelopmentEnviroment.png)
+![전형적인 마이크로컨트롤러 개발 환경](../fig/DevEnv_DevelopmentEnviroment.png)
 
 ## DAVE
 
@@ -70,37 +75,37 @@ Cross-compiler를 사용하여 해당 마이크로컨트롤러에서 실행할 �
     - 상단의 File 메뉴에서 [New]-[DAVE Project]를 선택한다.
     - 프로젝트의 이름을 입력하고 프로젝트 타입은 DAVE CE Project를 선택한다.
     - XMC4500-F100x1024 보드를 선택하고 Finish를 누른다.
-      ![DevEnv_CreatingProject1](./images/DevEnv_CreatingProject1.png)
+      ![DevEnv_CreatingProject1](../fig/DevEnv_CreatingProject1.png)
 
 * 프로젝트 불러오기
     - 상단의 File 메뉴에서 import를 선택한다.
-      ![DevEnv_ProjectImport0](./images/DevEnv_ProjectImport0.png)
+      ![DevEnv_ProjectImport0](../fig/DevEnv_ProjectImport0.png)
     - Existing Projects into Workspace를 선택한다.
-      ![DevEnv_ProjectImport1](./images/DevEnv_ProjectImport1.png)
+      ![DevEnv_ProjectImport1](../fig/DevEnv_ProjectImport1.png)
     - 아래의 그림과 같이 Browse를 선택하고 프로젝트가 있는 폴더위치를 설정한다. 그리고 Import 하고자 하는 프로젝트를 체크하고 Finish를 누른다.
-      ![DevEnv_ProjectImport2](./images/DevEnv_ProjectImport2.png)
+      ![DevEnv_ProjectImport2](../fig/DevEnv_ProjectImport2.png)
     - 위의 그림의 폴더 위치는 DAVE가 제공하는 예제코드의 위치이다. 이 곳에서 유용한 예제코드를 불러올 수 있다.
 
 > 예제코드 다운로드
 > 예제코드를 불러오기 위해서는 먼저 예제코드를 다운로드 해야 한다. 다운로드 하기 위해서는 상단의 [Help] - [Install DAVE APP/Example/Device Library]에서 아래의 그림과 같이 DAVE Project Library Manager를 선택하면 DAVE에서 제공하는 예제코드 목록이 나타난다. 여기서 필요한 예제코드를 체크하여 다운로드 할 수 있다.
-> ![DevEnv_InstallExample](./images/DevEnv_InstallExample.png)
+> ![DevEnv_InstallExample](../fig/DevEnv_InstallExample.png)
 
 
 * 헤더파일과 소스파일 추가
     - 상단의 File메뉴에서 [New]-[Other]을 선택한다.
-      ![DevEnv_AddHeaderSource0](./images/DevEnv_AddHeaderSource0.png)
+      ![DevEnv_AddHeaderSource0](../fig/DevEnv_AddHeaderSource0.png)
     - 아래 그림과 같이 C/C++에서 헤더파일과 소스파일을 프로젝트에 추가 할 수 있다.
-      ![DevEnv_AddHeaderSource1](./images/DevEnv_AddHeaderSource1.png)
+      ![DevEnv_AddHeaderSource1](../fig/DevEnv_AddHeaderSource1.png)
 
 * 프로젝트 활성화
     - 작업하고자 하는 프로젝트의 마우스 우클릭 메뉴에서 Set Active Project를 선택하여 활성화한다. 활성화 된 프로젝트의 이름은 bold체가 된다.
-      ![DevEnv_SetProject](./images/DevEnv_SetProject.png)
+      ![DevEnv_SetProject](../fig/DevEnv_SetProject.png)
 
 * 프로젝트의 디버그/릴리즈 설정
     - 프로젝트의 디버그 설정이란 프로그램을 디버깅 관련 기능을 사용할 수 있도록 컴파일 시 컴파일 옵션들을 자동으로 설정하는 기능이다.
     - 프로젝트의 릴리즈 설정이란 프로그램을 배포하기 위해 코드를 최적화하여 컴파일 하는 설정이다. 릴리즈 설정으로 컴파일 시 디버깅 관련 옵션은 모두 제외되어 디버깅할 수 없다.
     - 마우스 우클릭 메뉴에서 [Build Configurations]-[Set Active]에서 프로젝트의 빌드 설정을 변경 할 수 있다.
-      ![DevEnv_DebugRelease](./images/DevEnv_DebugRelease.png)
+      ![DevEnv_DebugRelease](../fig/DevEnv_DebugRelease.png)
 
 ## 컴파일러(Compiler)
 
@@ -111,16 +116,16 @@ DAVE에서는 GCC를 기반으로 하는 ARM 프로세서용 Cross-compiler를 �
 
 * 컴파일러 설정창 열기
     - 상단의 Project 메뉴에서 Properties를 선택한다.  
-      ![DevEnv_CompilerConfiguration0](./images/DevEnv_CompilerConfiguration0.png)
+      ![DevEnv_CompilerConfiguration0](../fig/DevEnv_CompilerConfiguration0.png)
     - 아래의 그림과 같이 메뉴들을 선택하면 C Compiler 설정을 확인 할 수 있다.
-      ![DevEnv_CompilerConfiguration1](./images/DevEnv_CompilerConfiguration1.png)
+      ![DevEnv_CompilerConfiguration1](../fig/DevEnv_CompilerConfiguration1.png)
 
 * 컴파일러 설정 요소
     - 위의 그림에서 ARM-GCC C Compiler를 선택하면 우측에 Command와 All options가 나타난다. Command는 실제로 사용할 컴파일러 프로그램을 나타내고 All options는 컴파일 실행 시 사용할 옵션들이다. 이 옵션들은 좌측의 Preprocessor, Directories, Optimization, Warnings, Miscellaneous 탭에서 설정한 정보들이 반영된다.
     - Preprocessor에서는 컴파일 과정에서 심볼을 정의할 수 있다. 일반적으로 이 과정에서 정의한 심볼을 통해서 타겟 보드를 구분한다.
-      ![DevEnv_CompilerConfiguration2](./images/DevEnv_CompilerConfiguration2.png)
+      ![DevEnv_CompilerConfiguration2](../fig/DevEnv_CompilerConfiguration2.png)
     - Directories에서는 컴파일 할 파일들의 위치를 설정한다.
-      ![DevEnv_CompilerConfiguration3](./images/DevEnv_CompilerConfiguration3.png)
+      ![DevEnv_CompilerConfiguration3](../fig/DevEnv_CompilerConfiguration3.png)
     - Optimization에서는 실행 파일의 최적화 정도를 설정한다.
     - Warnings에서는 컴파일 시 버그를 출력하는 정도를 조정한다.
     - Miscellaneous에서 사용할 언어표준, 소수 연산관련 설정한다.
@@ -129,9 +134,9 @@ DAVE에서는 GCC를 기반으로 하는 ARM 프로세서용 Cross-compiler를 �
 빌드란 소스 코드 파일을 컴퓨터에서 실행할 수 있는 독립 소프트웨어 가공물로 변환하는 과정을 말한다. 따라서, 컴파일도 빌드의 한 과정으로 볼 수 있다.
 
 * 프로젝트를 빌드 하기 위해서 아래그림과 같이 상단의 도구모음에서 1번 또는 2번을 사용하면 된다. 1번은 변경된 파일만 다시 컴파일하여 실행파일을 만든다. 반면에, 2번은 모든 파일을 컴파일하여 실행파일을 만든다.
-  ![DevEnv_Build0](./images/DevEnv_Build0.png)
+  ![DevEnv_Build0](../fig/DevEnv_Build0.png)
 * 빌드를 성공하면 아래의 그림 같은 결과를 콘솔에서 확인 할 수 있다.
-  ![DevEnv_Build1](./images/DevEnv_Build1.png)
+  ![DevEnv_Build1](../fig/DevEnv_Build1.png)
 
 ## 디버거(Debugger)
 
@@ -147,21 +152,21 @@ DAVE는 eclipse 를 기반으로 하므로 GCC에서 기본으로 채택하고 �
 DAVE에서 디버거를 사용하기 위해서는 보드와의 연결, 프로그램 이미지 파일 등의 설정이 필요하다.
 
 * 아래 그림과 같이 상단 도구모음에서 Debug Configurations를 선택하여 디버그 설정창을 확인 할 수 있다.
-  ![DevEnv_DebugSetting0](./images/DevEnv_DebugSetting0.png)
+  ![DevEnv_DebugSetting0](../fig/DevEnv_DebugSetting0.png)
 
 * Debug Configurations에서 좌측의 GDB SEGGER J-Link Debugging을 선택한다. 그리고 우측의 Main 탭에서 프로젝트명과 C/C++ Application이 올바르게 설정됐는지 확인한다. 그 후 하단의 Debug 버튼을 누르면 Debug화면으로 전환된다.
-  ![DevEnv_DebugSetting1](./images/DevEnv_DebugSetting1.png)
+  ![DevEnv_DebugSetting1](../fig/DevEnv_DebugSetting1.png)
 
 ### 디버거 활용: 실행 및 중지
 * DAVE Debugger 진입 시 상단 도구모음에는 다음 그림과 같은 버튼들이 추가된다. 1번은 프로그램을 시작하는 버튼이다. 2번은 프로그램을 일시정지, 3번은 프로그램을 완전 정지하는 버튼이다. 4번과 5번은 프로그램을 한 스탭 씩 실행하는 버튼이다. 둘의 차이점은 다음 프로그램 스탭이 함수인 경우 4번은 함수 내부로 들어가서 한 스탭씩 프로그램을 실행한다. 반면에 5번은 함수 루틴 전체를 한 스탭으로 실행한다.  
-  ![DevEnv_Debug0](./images/DevEnv_Debug0.png)
+  ![DevEnv_Debug0](../fig/DevEnv_Debug0.png)
 
 ### 디버거 활용: Breakpoint와 변수값 확인
 * Breakpoint는 특정 위치에서 프로그램의 실행을 정지시키는 기능이다. 아래의 그림에서는 PWM_SetFreq(&dhPWM_1, u32NewFreq) 함수가 실행되기 전 프로그램은 일시 정지된다. Breakpoint는 아래 그림의 표시 된 영역에서 정지시키고자 하는 라인에 맞춰 더블클릭하여 설정한다.
-  ![DevEnv_Debug1](./images/DevEnv_Debug1.png)
+  ![DevEnv_Debug1](../fig/DevEnv_Debug1.png)
 * 디버거에서 프로그램 실행 중 변수 값을 확인 할 수 있다. 변수 값을 보기 위해서는 아래 그림과 같이 Expressions 탭을 추가해야 한다. Expressions 탭에서 Add new expression을 누르고 확인하고자 하는 변수 이름을 입력한다.
-  ![DevEnv_Debug2](./images/DevEnv_Debug2.png)
-  ![DevEnv_Debug3](./images/DevEnv_Debug3.png)
+  ![DevEnv_Debug2](../fig/DevEnv_Debug2.png)
+  ![DevEnv_Debug3](../fig/DevEnv_Debug3.png)
 ## 개발 보드(Board)
 
 * 개발 보드 혹은 평가용 보드  
@@ -179,15 +184,15 @@ XMC4500을 위한 평가용 보드 또한 여러가지가 존재한다. 실습�
 * Ethernet Physical 플러그(주, XMC4500 Relax 보드)
 * microSD 카드 슬롯(주, XMC4500 Relax 보드)
 
-![XMC4500 Relax Lite Kit 블록도](./images/DevEnv_XMC4500RelaxLiteKitBlockDiagram.png)
+![XMC4500 Relax Lite Kit 블록도](../fig/DevEnv_XMC4500RelaxLiteKitBlockDiagram.png)
 
 사진에서 볼 수 있는 바와 같이 지극히 적은 개수의 소자들로 구성된 보드이다. 이는 XMC4500 마이크로컨트롤러가 내부적으로 많은 기능을 가지고 있어 높은 집적도를 가지고 있기 때문이다. 디버거 또한 다른 XMC4500 칩을 사용하여 구성하여 놓았다. 그러므로 개발자는 가장 간단하게는 USB 케이블만 연결하면 개발 보드에 전원을 공급함과 동시에 디버깅을 수행할 수 있게 된다. 개발이 끝난 후에는 디버거 부분을 절단하여 더욱 작은 크기로 시스템을 구성할 수도 있다.
 
-![XMC4500 Relax Lite Kit Picture](./images/DevEnv_XMC4500RelaxLiteKitPicture.png)
+![XMC4500 Relax Lite Kit Picture](../fig/DevEnv_XMC4500RelaxLiteKitPicture.png)
 
 핀 헤더 X1 및 X2는 평가 보드를 확장하거나 XMC4500에서 측정을 수행하는 데 사용할 수 있다. 핀 헤더에서 사용 가능한 GPIO 신호를 나타내고 있다. 이 테이블은 또한에 개발보드 PCB의 바닥면에 인쇄되어 있어 더욱 쉽게 시스템을 구성할 수 있도록 도와주고 있다.
 
-![XMC4500 Relax Lite Kit Pin Header](./images/DevEnv_XMC4500RelaxLiteKitPinHeader.png)
+![XMC4500 Relax Lite Kit Pin Header](../fig/DevEnv_XMC4500RelaxLiteKitPinHeader.png)
 
 ## 실습
 
